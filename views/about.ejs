@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Plus+Jakarta+Sans&family=Roboto:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500&family=Roboto:wght@500&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        color: #6E07F3;
+        overflow: hidden;
+    }
+    :root{
+        --heading: font-family: 'Heebo', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
+    nav{
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid whitesmoke;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li a{
+        text-decoration: none;
+        transition: all linear 0.2s;
+        color: #141c3a;
+        margin: 2vw;
+        font-size: 1.5vw;
+        font-family: 'Heebo', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
+    li{
+        list-style: none;
+    }
+    #logo{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        margin-left: -90vw;
+        margin-top: 1vw;
+    }
+    #logo img{
+        width: 5vw;
+        height: 8vh;
+        transition: all 1ms;
+    }
+    nav ul li a:hover{
+        color: #6E07F3;
+        transition: all linear 0.2s;
+    }
+    nav button{
+        position: absolute;
+        margin-left: 85vw;
+        width: 10vw;
+        height: 5vh;
+        cursor: pointer;
+        background-color: #fff;
+        border: 2px solid #6E07F3;
+        border-radius: 50px;
+        font-weight: 100;
+        color: #6E07F3;
+        font-size: 1.2vw;
+        transition: all linear 0.3s;
+    }
+    nav button:hover{
+        background-color: #6E07F3;
+        color: #fff;
+        transition: all linear 0.3s;
+        font-family: 'Heebo', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
+    /* Responsive Navbar */
+                .menu-icon {
+            display: none;
+            margin-left: 80%;
+            cursor: pointer;
+            padding: 15px 20px;
+            background-color: transparent;
+            color: #6a5acd;
+            font-size: 20px;
+
+        }
+           .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #6a5acd;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        .overlay a{
+            color: #fff;
+            text-decoration: none;
+        }
+        #overlay ul{
+            margin-top: 75vw;
+            font-size: 1.5rem;
+            line-height: 12vw;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            #logo {
+                height: 8vh;
+                overflow: hidden;
+                margin-left: -80vw;
+                margin-top: 4vw;
+            }
+            #logo img{
+                width: 20vw;
+            }
+            nav li {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav.responsive ul {
+                display: block;
+            }
+        }
+    /* Main Page */
+        header {
+            background-color: #fff;
+            color: #141c3a;
+            text-align: center;
+            padding: 1em 0;
+            margin-bottom: 20px;
+        }
+        header h1{
+            color: #141c3a;
+        }
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        h1, h2, h3 {
+            color: #6E07F3;
+            margin-bottom: 10px;
+        }
+
+        p, .ul2 {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .ps{
+            color: #141c3a;
+        }
+        .a2 {
+            color: #6E07F3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .a2:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        #about{
+            animation: fadeInUp 1s ease-out;
+        }
+    /* ANIMATION */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div id="logo">
+        <a href="/home"><img src="../images/logo.jpg" alt="Total Equipment Solutions"></a>
+    </div>
+
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Our Services</a></li>
+        <!-- <li><a href="/products">Our Products</a></li> -->
+        <li><a href="/contact">Contact Us</a></li>
+        <button id="contactbtn">Ask Us</button>
+    </ul>
+</nav>
+
+<div class="overlay" id="overlay">
+        <span class="close-button" onclick="toggleMenu()">X</span>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Our Services</a></li>
+        <!-- <li><a href="/products">Our Products</a></li> -->
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+</div>
+</nav>
+
+<!-- Main About Page -->
+    <div id="about">
+    <header>
+        <h1>About Us</h1>
+        <p>Welcome to <span style="font-weight: bold;">Total Equipment Solution (PVT .) LTD.</span> – <span style="font-style: italic;">Where Ingenuity Meets Reliability</span>.</p>
+        <img src="../images/about.png" alt="">
+    </header>
+
+    <section>
+        <h2>Our Story</h2>
+        <p class="ps">Welcome to Total Equipment Solution (Private) Limited, a pioneering leader in providing cuttingedge thermal mapping services in Pakistan. At Total Equipment Solution (Private) Limited, we
+        specialize in utilizing advanced thermal mapping technology to offer comprehensive solutions for
+        diverse industries. With a commitment to precision, innovation, and excellence, we have established
+        ourselves as a trusted partner for businesses seeking accurate thermal insights.</p>
+
+        <h2>What Sets Us Apart</h2>
+        <h3 style="color: #141c3a;">Expertise:</h3>
+        <p class="ps">Our team comprises skilled professionals with expertise in thermal imaging technology and a deep understanding of various industries.</p>
+        <img src="../images/expertise.avif" alt="Expertise">
+
+        <h3 style="color: #141c3a;">Cutting-Edge Technology:</h3>
+        <p class="ps">We invest in the latest thermal mapping equipment and software to
+        ensure the highest level of accuracy and reliability in our services.
+        </p>
+        <img src="../images/tech.jpg" alt="tech Image">
+
+        <h3 style="color: #141c3a;">Customized Solutions:</h3>
+        <p class="ps">Recognizing that each industry has unique requirements, we tailor our
+        thermal mapping services to meet the specific needs of our clients.
+        </p>
+        <img src="../images/sol.avif" alt="Solutions Image">
+
+        <h3 style="color: #141c3a;">Quality Assurance:</h3>
+        <p class="ps">Rigorous quality control measures are in place to guarantee the precision and reliability of our thermal mapping data.
+        </p>
+        <img src="../images/quality.jpg" alt="quality image">
+
+        <h3 style="color: #141c3a;">Comprehensive Reporting:</h3>
+        <p class="ps">We provide detailed and actionable reports, enabling our clients to make
+        informed decisions based on the thermal insights we uncover.
+        </p>
+        <img src="../images/report.jpg" alt="report image">
+
+    <section>
+        <h2>Connect With Us</h2>
+        <p class="ps">Have questions or just want to say hello? We'd love to hear from you. Reach out to us at <span style="font-weight: bold;">+92-301-8449552</span>.</p>
+        <p class="ps">Follow us on <a  class="a2" href="#" style="font-weight: bold; color: #6E07F3;">Social Media</a> for the latest updates and behind-the-scenes glimpses.</p>
+    </section>
+</div>
+
+</body>
+<script>
+    document.getElementById("contactbtn").addEventListener("click", ()=>{
+        window.location.href = 'contact'
+    })
+    function toggleMenu() {
+        var overlay = document.getElementById('overlay');
+        if (overlay.style.display === 'block') {
+            overlay.style.animationName = 'slideOut';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 50); // Animation duration is 0.5s
+        } else {
+            overlay.style.animationName = 'slideIn';
+            overlay.style.display = 'block';
+        }
+    }
+</script>
+</html>
